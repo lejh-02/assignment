@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "QStackedWidget"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -17,7 +18,11 @@ public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow() override;
 
+private slots:
+    void on_pushButton_clicked();
+
 private:
+    QStackedWidget *stackedwidget;
     Ui::MainWindow *ui;
 };
 #endif // MAINWINDOW_H
