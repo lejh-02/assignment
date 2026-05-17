@@ -1,5 +1,6 @@
 #include "subwindow.h"
 #include "ui_subwindow.h"
+#include "mainwindow.h"
 
 subwindow::subwindow(QWidget *parent)
     : QMainWindow(parent)
@@ -12,3 +13,10 @@ subwindow::~subwindow()
 {
     delete ui;
 }
+
+void subwindow::on_pushButton_clicked()
+{
+    MainWindow *newWin = new MainWindow();
+    newWin -> show();
+}
+

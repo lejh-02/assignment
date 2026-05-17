@@ -52,7 +52,7 @@ public:
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
         MainWindow->resize(583, 256);
-        MainWindow->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 242, 213);\n"
+        MainWindow->setStyleSheet(QString::fromUtf8("background-color: rgb(186, 246, 182);\n"
 "color: rgb(4, 4, 4);"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
@@ -158,7 +158,7 @@ public:
         label_2->setText(QCoreApplication::translate("MainWindow", "Password :", nullptr));
         pushButton_2->setText(QCoreApplication::translate("MainWindow", "EXIT", nullptr));
         pushButton->setText(QCoreApplication::translate("MainWindow", "Enter", nullptr));
-        menuUSER_AUTHENTICATION->setTitle(QCoreApplication::translate("MainWindow", "                                         USER AUTHENTICATION", nullptr));
+        menuUSER_AUTHENTICATION->setTitle(QCoreApplication::translate("MainWindow", "USER AUTHENTICATION", nullptr));
     } // retranslateUi
 
 };

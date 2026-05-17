@@ -14,7 +14,7 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(255, 242, 213);
+   <string notr="true">background-color: rgb(186, 246, 182);
 color: rgb(4, 4, 4);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
@@ -201,7 +201,7 @@ color: rgb(255, 255, 255);</string>
    </property>
    <widget class="QMenu" name="menuUSER_AUTHENTICATION">
     <property name="title">
-     <string>                                         USER AUTHENTICATION</string>
+     <string>USER AUTHENTICATION</string>
     </property>
    </widget>
    <addaction name="menuUSER_AUTHENTICATION"/>

@@ -10,7 +10,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    stackedwidget = new QStackedWidget(this);
+
 
 }
 
@@ -22,6 +22,6 @@ MainWindow::~MainWindow()
 void MainWindow::on_pushButton_clicked()
 {
     subwindow *newWin = new subwindow();
-    newWin -> show();
+    newWin -> showFullScreen();
 
 }

@@ -15,6 +15,9 @@ public:
     explicit subwindow(QWidget *parent = nullptr);
     ~subwindow();
 
+private slots:
+    void on_pushButton_clicked();
+
 private:
     Ui::subwindow *ui;
 };
