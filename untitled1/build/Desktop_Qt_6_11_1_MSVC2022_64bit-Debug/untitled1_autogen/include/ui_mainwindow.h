@@ -41,8 +41,8 @@ public:
     QSpacerItem *verticalSpacer_4;
     QPushButton *pushButton_2;
     QSpacerItem *verticalSpacer_2;
-    QSpacerItem *verticalSpacer_3;
     QPushButton *pushButton;
+    QSpacerItem *verticalSpacer_3;
     QStatusBar *statusbar;
     QMenuBar *menuBar;
     QMenu *menuUSER_AUTHENTICATION;
@@ -100,7 +100,8 @@ public:
         lineEdit = new QLineEdit(centralwidget);
         lineEdit->setObjectName("lineEdit");
         lineEdit->setMaximumSize(QSize(360, 16777215));
-        lineEdit->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+        lineEdit->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);\n"
+"border-radius: 15px;"));
 
         gridLayout->addWidget(lineEdit, 1, 3, 1, 1);
 
@@ -119,16 +120,16 @@ public:
 
         gridLayout->addItem(verticalSpacer_2, 3, 1, 1, 1);
 
-        verticalSpacer_3 = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
-
-        gridLayout->addItem(verticalSpacer_3, 0, 1, 1, 1);
-
         pushButton = new QPushButton(centralwidget);
         pushButton->setObjectName("pushButton");
         pushButton->setMaximumSize(QSize(406, 16777215));
         pushButton->setStyleSheet(QString::fromUtf8("background-color: rgb(215, 243, 255);"));
 
         gridLayout->addWidget(pushButton, 4, 3, 1, 1);
+
+        verticalSpacer_3 = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
+
+        gridLayout->addItem(verticalSpacer_3, 0, 2, 1, 1);
 
         MainWindow->setCentralWidget(centralwidget);
         statusbar = new QStatusBar(MainWindow);

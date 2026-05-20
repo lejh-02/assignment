@@ -17,7 +17,6 @@
 #include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
-#include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTabWidget>
 #include <QtWidgets/QWidget>
@@ -29,12 +28,10 @@ class Ui_subwindow
 public:
     QWidget *centralwidget;
     QGridLayout *gridLayout;
-    QSpacerItem *horizontalSpacer_2;
+    QPushButton *pushButton;
     QTabWidget *tabWidget;
     QWidget *tab;
-    QGridLayout *gridLayout_2;
     QWidget *tab_2;
-    QPushButton *pushButton;
     QMenuBar *menubar;
     QMenu *menuHOME;
     QStatusBar *statusbar;
@@ -50,25 +47,6 @@ public:
         centralwidget->setObjectName("centralwidget");
         gridLayout = new QGridLayout(centralwidget);
         gridLayout->setObjectName("gridLayout");
-        horizontalSpacer_2 = new QSpacerItem(423, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
-
-        gridLayout->addItem(horizontalSpacer_2, 1, 1, 1, 1);
-
-        tabWidget = new QTabWidget(centralwidget);
-        tabWidget->setObjectName("tabWidget");
-        tabWidget->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0)\n"
-""));
-        tab = new QWidget();
-        tab->setObjectName("tab");
-        gridLayout_2 = new QGridLayout(tab);
-        gridLayout_2->setObjectName("gridLayout_2");
-        tabWidget->addTab(tab, QString());
-        tab_2 = new QWidget();
-        tab_2->setObjectName("tab_2");
-        tabWidget->addTab(tab_2, QString());
-
-        gridLayout->addWidget(tabWidget, 0, 0, 1, 2);
-
         pushButton = new QPushButton(centralwidget);
         pushButton->setObjectName("pushButton");
         pushButton->setMaximumSize(QSize(56, 18));
@@ -76,6 +54,18 @@ public:
 "color: rgb(255, 255, 255);"));
 
         gridLayout->addWidget(pushButton, 1, 0, 1, 1);
+
+        tabWidget = new QTabWidget(centralwidget);
+        tabWidget->setObjectName("tabWidget");
+        tabWidget->setTabShape(QTabWidget::TabShape::Rounded);
+        tab = new QWidget();
+        tab->setObjectName("tab");
+        tabWidget->addTab(tab, QString());
+        tab_2 = new QWidget();
+        tab_2->setObjectName("tab_2");
+        tabWidget->addTab(tab_2, QString());
+
+        gridLayout->addWidget(tabWidget, 0, 0, 1, 1);
 
         subwindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(subwindow);
@@ -93,16 +83,25 @@ public:
         retranslateUi(subwindow);
         QObject::connect(pushButton, &QPushButton::clicked, subwindow, qOverload<>(&QMainWindow::close));
 
+        tabWidget->setCurrentIndex(1);
+
+
         QMetaObject::connectSlotsByName(subwindow);
     } // setupUi
 
     void retranslateUi(QMainWindow *subwindow)
     {
         subwindow->setWindowTitle(QCoreApplication::translate("subwindow", "MainWindow", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(tab), QCoreApplication::translate("subwindow", "Tab 1", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(tab_2), QCoreApplication::translate("subwindow", "Tab 2", nullptr));
         pushButton->setText(QCoreApplication::translate("subwindow", "Back", nullptr));
-        menuHOME->setTitle(QCoreApplication::translate("subwindow", "HOME", nullptr));
+#if QT_CONFIG(tooltip)
+        tabWidget->setToolTip(QCoreApplication::translate("subwindow", "<html><head/><body><p>jn</p><p><br/></p></body></html>", nullptr));
+#endif // QT_CONFIG(tooltip)
+#if QT_CONFIG(whatsthis)
+        tabWidget->setWhatsThis(QCoreApplication::translate("subwindow", "<html><head/><body><p>njdnj</p><p><br/></p></body></html>", nullptr));
+#endif // QT_CONFIG(whatsthis)
+        tabWidget->setTabText(tabWidget->indexOf(tab), QCoreApplication::translate("subwindow", "HOME", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(tab_2), QCoreApplication::translate("subwindow", "LIST", nullptr));
+        menuHOME->setTitle(QCoreApplication::translate("subwindow", "THE GREENBOX", nullptr));
     } // retranslateUi
 
 };
