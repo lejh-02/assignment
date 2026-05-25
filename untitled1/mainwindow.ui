@@ -64,7 +64,7 @@ color: rgb(4, 4, 4);</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">
+       <string notr="true">border-radius: 8;
 background-color: rgb(255, 255, 255);</string>
       </property>
      </widget>
@@ -109,7 +109,7 @@ background-color: rgb(255, 255, 255);</string>
      </spacer>
     </item>
     <item row="1" column="3">
-     <widget class="QLineEdit" name="lineEdit">
+     <widget class="QLineEdit" name="name">
       <property name="maximumSize">
        <size>
         <width>360</width>
@@ -118,7 +118,7 @@ background-color: rgb(255, 255, 255);</string>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color: rgb(255, 255, 255);
-</string>
+border-radius:5px;</string>
       </property>
      </widget>
     </item>
@@ -139,7 +139,8 @@ background-color: rgb(255, 255, 255);</string>
      <widget class="QPushButton" name="pushButton_2">
       <property name="styleSheet">
        <string notr="true">background-color: rgb(174, 33, 35);
-color: rgb(255, 255, 255);</string>
+color: rgb(255, 255, 255);
+border-radius: 6px;</string>
       </property>
       <property name="text">
        <string>EXIT</string>
@@ -159,23 +160,6 @@ color: rgb(255, 255, 255);</string>
       </property>
      </spacer>
     </item>
-    <item row="4" column="3">
-     <widget class="QPushButton" name="pushButton">
-      <property name="maximumSize">
-       <size>
-        <width>406</width>
-        <height>16777215</height>
-       </size>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(215, 243, 255);
-</string>
-      </property>
-      <property name="text">
-       <string>Enter</string>
-      </property>
-     </widget>
-    </item>
     <item row="0" column="2">
      <spacer name="verticalSpacer_3">
       <property name="orientation">
@@ -188,6 +172,23 @@ color: rgb(255, 255, 255);</string>
        </size>
       </property>
      </spacer>
+    </item>
+    <item row="4" column="3" rowspan="2">
+     <widget class="QPushButton" name="pushButton">
+      <property name="maximumSize">
+       <size>
+        <width>406</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(215, 243, 255);
+border-radius: 1.5px;</string>
+      </property>
+      <property name="text">
+       <string>Enter</string>
+      </property>
+     </widget>
     </item>
    </layout>
   </widget>
@@ -210,7 +211,7 @@ color: rgb(255, 255, 255);</string>
   </widget>
  </widget>
  <tabstops>
-  <tabstop>lineEdit</tabstop>
+  <tabstop>name</tabstop>
   <tabstop>lineEdit_2</tabstop>
  </tabstops>
  <resources/>
@@ -250,7 +251,7 @@ color: rgb(255, 255, 255);</string>
   <connection>
    <sender>pushButton</sender>
    <signal>clicked()</signal>
-   <receiver>lineEdit</receiver>
+   <receiver>name</receiver>
    <slot>copy()</slot>
    <hints>
     <hint type="sourcelabel">

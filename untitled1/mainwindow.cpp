@@ -20,8 +20,8 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
+
     subwindow *newWin = new subwindow();
     newWin -> showFullScreen();
-
 
 }
