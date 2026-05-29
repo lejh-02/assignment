@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>tutorial</class>
+ <widget class="QDialog" name="tutorial">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>623</width>
+    <height>643</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QLabel" name="tutorialLabel">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>30</y>
+     <width>251</width>
+     <height>591</height>
+    </rect>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LayoutDirection::LeftToRight</enum>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Shape::StyledPanel</enum>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;ADD BUTTON&lt;/span&gt;&lt;/p&gt;&lt;p&gt;- Enter item name&lt;/p&gt;&lt;p&gt;- Enter quantity&lt;/p&gt;&lt;p&gt;- Click Add&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;REMOVE BUTTON&lt;/span&gt;&lt;/p&gt;&lt;p&gt;- Enter row number&lt;/p&gt;&lt;p&gt;- Click Remove&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;EDIT BUTTON- Enter row number&lt;/span&gt;&lt;/p&gt;&lt;p&gt;- Enter new values&lt;/p&gt;&lt;p&gt;- Click Edit&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;LOGOUT BUTTON&lt;/span&gt;&lt;/p&gt;&lt;p&gt;- Return to login page&lt;br/&gt;&lt;span style=&quot; font-weight:700;&quot;&gt; X button &lt;/span&gt;&lt;/p&gt;&lt;p&gt;-Exit &lt;br/&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;MADE BY&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Law Jin Tao&lt;/p&gt;&lt;p&gt;Su Dao Yi&lt;/p&gt;&lt;p&gt;Lee Joon Hang&lt;/p&gt;&lt;p&gt;Chai Chuan Wei&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="backButton">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>80</y>
+     <width>221</width>
+     <height>131</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Return to login page</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
