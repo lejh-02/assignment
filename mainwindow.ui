@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>913</width>
-    <height>600</height>
+    <width>1523</width>
+    <height>956</height>
    </rect>
   </property>
   <property name="cursor">
@@ -19,12 +19,16 @@
   <property name="autoFillBackground">
    <bool>false</bool>
   </property>
+  <property name="styleSheet">
+   <string notr="true">
+background-color: qlineargradient(spread:pad, x1:0.544318, y1:0, x2:0.54, y2:1, stop:0 rgba(0, 0, 0, 255), stop:0.985782 rgba(65, 64, 79, 255), stop:1 rgba(255, 255, 255, 255));</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>230</x>
-      <y>80</y>
+      <x>240</x>
+      <y>110</y>
       <width>111</width>
       <height>51</height>
      </rect>
@@ -36,11 +40,14 @@
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>250</x>
-      <y>120</y>
+      <x>240</x>
+      <y>150</y>
       <width>111</width>
       <height>51</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
     </property>
     <property name="text">
      <string>Quantity:</string>
@@ -52,100 +59,171 @@
    <widget class="QLineEdit" name="nameEdit">
     <property name="geometry">
      <rect>
-      <x>330</x>
-      <y>90</y>
+      <x>340</x>
+      <y>120</y>
       <width>211</width>
       <height>28</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+    border: 2px solid #a0a0a0;
+    border-radius: 14px;      /* Controls the corner roundness */
+    padding: 4px 8px;        /* Keeps the text away from the borders */
+     /* Keeps the background white */
+}
+
+/* Optional: Change border color when clicked/focused */
+QLineEdit:focus {
+    border: 2px solid #0078d4; 
+}</string>
+    </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="placeholderText">
+     <string>ENTER ITEM NAME</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="quantityEdit">
     <property name="geometry">
      <rect>
-      <x>330</x>
-      <y>140</y>
+      <x>340</x>
+      <y>160</y>
       <width>211</width>
       <height>28</height>
      </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::FocusPolicy::StrongFocus</enum>
+    </property>
+    <property name="toolTipDuration">
+     <number>0</number>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+    border: 2px solid #a0a0a0;
+    border-radius: 14px;      /* Controls the corner roundness */
+    padding: 4px 8px;        /* Keeps the text away from the borders */
+     /* Keeps the background white */
+}
+
+/* Optional: Change border color when clicked/focused */
+QLineEdit:focus {
+    border: 2px solid #0078d4; 
+}</string>
+    </property>
+    <property name="placeholderText">
+     <string>ENTER QUANTITY</string>
     </property>
    </widget>
    <widget class="QPushButton" name="addButton">
     <property name="geometry">
      <rect>
-      <x>460</x>
-      <y>250</y>
-      <width>90</width>
+      <x>400</x>
+      <y>450</y>
+      <width>131</width>
       <height>29</height>
      </rect>
     </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    border: 2px solid #0e6fed;   /* Blue border */
+    border-radius: 8px;          /* Matching corner roundness */
+    padding: 4px 16px;           
+    background-color: transparent; /* No background color */
+    color: rgb(255, 255, 255);             /* Blue text */
+
+    font-weight: bold;
+}
+
+/* Changes when the mouse hovers over it */
+QPushButton:hover {
+    background-color: #40fff9;   /* Very faint blue background hint */
+	color: rgb(255, 255, 255);
+    border-color: #005a9e;       /* Darker blue border *          /* Darker blue text */
+	
+}
+
+/* Changes when clicked */
+QPushButton:pressed {
+    background-color: #deecf9;   /* Light blue fill only on click */
+}</string>
+    </property>
     <property name="text">
-     <string>add</string>
+     <string>Add</string>
+    </property>
+    <property name="icon">
+     <iconset theme="QIcon::ThemeIcon::DocumentSend"/>
+    </property>
+    <property name="autoRepeatDelay">
+     <number>298</number>
     </property>
    </widget>
    <widget class="QPushButton" name="removeButton">
     <property name="geometry">
      <rect>
-      <x>230</x>
-      <y>250</y>
-      <width>90</width>
+      <x>240</x>
+      <y>450</y>
+      <width>131</width>
       <height>29</height>
      </rect>
     </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::FocusPolicy::WheelFocus</enum>
+    </property>
+    <property name="toolTipDuration">
+     <number>-4</number>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    border: 2px solid #ed0e0e;   /* Blue border */
+    border-radius: 8px;          /* Matching corner roundness */
+    padding: 4px 16px;           
+    background-color: transparent; /* No background color */
+    color: #ed0e0e;             /* Blue text */
+    font-weight: bold;
+}
+
+/* Changes when the mouse hovers over it */
+QPushButton:hover {
+    background-color: #ed0e0e;   /* Very faint blue background hint */
+    border-color: #005a9e;       /* Darker blue border */
+    color: #005a9e;              /* Darker blue text */
+}
+
+/* Changes when clicked */
+QPushButton:pressed {
+    background-color: #deecf9;   /* Light blue fill only on click */
+}</string>
+    </property>
     <property name="text">
-     <string>Remove</string>
+     <string>Remove </string>
+    </property>
+    <property name="icon">
+     <iconset theme="QIcon::ThemeIcon::EditDelete"/>
     </property>
    </widget>
    <widget class="QTableWidget" name="tableWidget">
     <property name="geometry">
      <rect>
-      <x>630</x>
-      <y>60</y>
-      <width>271</width>
-      <height>471</height>
+      <x>600</x>
+      <y>50</y>
+      <width>871</width>
+      <height>791</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">ui-&gt;tableWidget-&gt;setStyleSheet(R&quot;(
-QTableWidget {
-    background-color: #dff4ff;
-    color: #003049;
-    border: 2px solid #0077b6;
-    border-radius: 10px;
-    gridline-color: #90e0ef;
-    font-size: 14px;
-}
-
-QTableWidget::item {
-    padding: 8px;
-    background-color: #dff4ff;
-    color: #003049;
-}
-
-QTableWidget::item:selected {
-    background-color: #0077b6;
-    color: white;
-}
-
-QTableWidget::item:hover {
-    background-color: #90e0ef;
-}
-
-QHeaderView::section {
-    background-color: #0077b6;
-    color: white;
-    padding: 8px;
-    border: none;
-    font-weight: bold;
-    font-size: 15px;
-}
-)&quot;);
-</string>
+     <string notr="true">background-color: rgb(70,70,70);</string>
     </property>
     <property name="gridStyle">
-     <enum>Qt::PenStyle::SolidLine</enum>
+     <enum>Qt::PenStyle::DashDotLine</enum>
     </property>
     <property name="sortingEnabled">
      <bool>true</bool>
@@ -174,6 +252,11 @@ QHeaderView::section {
       <iconset theme="QIcon::ThemeIcon::EditSelectAll"/>
      </property>
     </column>
+    <column>
+     <property name="text">
+      <string>PRICE</string>
+     </property>
+    </column>
     <item row="0" column="0">
      <property name="text">
       <string/>
@@ -188,20 +271,36 @@ QHeaderView::section {
    <widget class="QLineEdit" name="rowEdit">
     <property name="geometry">
      <rect>
-      <x>330</x>
-      <y>180</y>
+      <x>340</x>
+      <y>210</y>
       <width>211</width>
-      <height>26</height>
+      <height>31</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+    border: 2px solid #a0a0a0;
+    border-radius: 14px;      /* Controls the corner roundness */
+    padding: 4px 8px;        /* Keeps the text away from the borders */
+     /* Keeps the background white */
+}
+
+/* Optional: Change border color when clicked/focused */
+QLineEdit:focus {
+    border: 2px solid #0078d4; 
+}</string>
+    </property>
+    <property name="placeholderText">
+     <string>ENTER ROW</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_4">
     <property name="geometry">
      <rect>
-      <x>250</x>
-      <y>180</y>
+      <x>260</x>
+      <y>210</y>
       <width>63</width>
-      <height>20</height>
+      <height>21</height>
      </rect>
     </property>
     <property name="text">
@@ -211,17 +310,45 @@ QHeaderView::section {
    <widget class="QPushButton" name="editButton">
     <property name="geometry">
      <rect>
-      <x>340</x>
-      <y>250</y>
-      <width>93</width>
-      <height>29</height>
+      <x>320</x>
+      <y>500</y>
+      <width>131</width>
+      <height>31</height>
      </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    border: 2px solid rgb(0, 255, 127);   /* Blue border */
+    border-radius: 8px;          /* Matching corner roundness */
+    padding: 4px 16px;           
+    background-color: transparent; /* No background color */
+    color: #2dd66e;             /* Blue text */
+    font-weight: bold;
+}
+
+/* Changes when the mouse hovers over it */
+QPushButton:hover {
+    background-color: #rgb(172, 255, 179);   /* Very faint blue background hint */
+    border-color: #rgb(164, 255, 89);       /* Darker blue border *          /* Darker blue text */
+	color: rgb(255, 255, 255);
+}
+
+/* Changes when clicked */
+QPushButton:pressed {
+    background-color: #deecf9;   /* Light blue fill only on click */
+}</string>
     </property>
     <property name="text">
      <string>Edit</string>
     </property>
+    <property name="icon">
+     <iconset theme="QIcon::ThemeIcon::EditCut"/>
+    </property>
    </widget>
-   <widget class="QWidget" name="widget" native="true">
+   <widget class="QStackedWidget" name="stackedWidget">
     <property name="enabled">
      <bool>true</bool>
     </property>
@@ -230,7 +357,7 @@ QHeaderView::section {
       <x>0</x>
       <y>0</y>
       <width>171</width>
-      <height>631</height>
+      <height>931</height>
      </rect>
     </property>
     <property name="cursor">
@@ -246,69 +373,127 @@ QHeaderView::section {
      <bool>false</bool>
     </property>
     <property name="styleSheet">
-     <string notr="true">
-background-color: qlineargradient(spread:pad, x1:0.972, y1:0.988636, x2:1, y2:1, stop:0 rgba(0, 0, 255, 255), stop:1 rgba(255, 255, 255, 255));</string>
+     <string notr="true">background-color: qlineargradient(spread:pad, x1:0.549829, y1:1, x2:0.488152, y2:0, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(76, 66, 113, 255));</string>
     </property>
-    <widget class="QLabel" name="welcomeLabel">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>10</y>
-       <width>231</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="contextMenuPolicy">
-      <enum>Qt::ContextMenuPolicy::NoContextMenu</enum>
-     </property>
-     <property name="text">
-      <string>Welcome</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="logoutButton">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>510</y>
-       <width>151</width>
-       <height>29</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Log out 🔒</string>
-     </property>
+    <widget class="QWidget" name="stackedWidgetPage1">
+     <widget class="QLabel" name="welcomeLabel">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>151</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="contextMenuPolicy">
+       <enum>Qt::ContextMenuPolicy::NoContextMenu</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0,0,0);</string>
+      </property>
+      <property name="text">
+       <string>  Welcome</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="logoutButton">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>850</y>
+        <width>151</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);
+border-radius: 14px;</string>
+      </property>
+      <property name="text">
+       <string>Log out 🔒</string>
+      </property>
+     </widget>
     </widget>
    </widget>
+   <widget class="QLineEdit" name="priceEdit">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>270</y>
+      <width>211</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>IBeamCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+    border: 2px solid #a0a0a0;
+    border-radius: 14px;      /* Controls the corner roundness */
+    padding: 4px 8px;        /* Keeps the text away from the borders */
+     /* Keeps the background white */
+}
+
+/* Optional: Change border color when clicked/focused */
+QLineEdit:focus {
+    border: 2px solid #0078d4; 
+}</string>
+    </property>
+    <property name="placeholderText">
+     <string>ENTER PRICE PER ITEM</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="categoryEdit">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>340</y>
+      <width>191</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+background-color: rgb(70,70,70)</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>default</string>
+     </property>
+     <property name="icon">
+      <iconset theme="QIcon::ThemeIcon::DocumentProperties"/>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>270</y>
+      <width>63</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Price :</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>340</y>
+      <width>63</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Category:</string>
+    </property>
+   </widget>
   </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>913</width>
-     <height>25</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
- <connections>
-  <connection>
-   <sender>logoutButton</sender>
-   <signal>clicked()</signal>
-   <receiver>logoutButton</receiver>
-   <slot>show()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>51</x>
-     <y>166</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>82</x>
-     <y>174</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
+ <connections/>
 </ui>

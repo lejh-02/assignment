@@ -32,7 +32,7 @@
    <number>0</number>
   </property>
   <property name="styleSheet">
-   <string notr="true"/>
+   <string notr="true">background-color: qlineargradient(spread:pad, x1:0.402611, y1:0.403, x2:1, y2:0.403318, stop:0.862559 rgba(0, 0, 0, 255));</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <property name="topMargin">
@@ -43,6 +43,9 @@
    </property>
    <item row="4" column="0">
     <widget class="QGroupBox" name="groupBox">
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(80, 80, 80);</string>
+     </property>
      <property name="title">
       <string>Backpack </string>
      </property>
@@ -52,8 +55,21 @@
         <x>260</x>
         <y>230</y>
         <width>201</width>
-        <height>28</height>
+        <height>31</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit {
+    border: 2px solid #a0a0a0;
+    border-radius: 14px;      /* Controls the corner roundness */
+    padding: 4px 8px;        /* Keeps the text away from the borders */
+     /* Keeps the background white */
+}
+
+/* Optional: Change border color when clicked/focused */
+QLineEdit:focus {
+    border: 2px solid #0078d4; 
+}</string>
       </property>
       <property name="placeholderText">
        <string>Enter username ☺️</string>
@@ -65,14 +81,27 @@
         <x>260</x>
         <y>270</y>
         <width>201</width>
-        <height>28</height>
+        <height>31</height>
        </rect>
       </property>
       <property name="cursor">
-       <cursorShape>SizeHorCursor</cursorShape>
+       <cursorShape>IBeamCursor</cursorShape>
       </property>
       <property name="focusPolicy">
        <enum>Qt::FocusPolicy::WheelFocus</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit {
+    border: 2px solid #a0a0a0;
+    border-radius: 14px;      /* Controls the corner roundness */
+    padding: 4px 8px;        /* Keeps the text away from the borders */
+     /* Keeps the background white */
+}
+
+/* Optional: Change border color when clicked/focused */
+QLineEdit:focus {
+    border: 2px solid #0078d4; 
+}</string>
       </property>
       <property name="placeholderText">
        <string>Enter  password 🔑</string>
@@ -81,32 +110,23 @@
      <widget class="QPushButton" name="loginButton">
       <property name="geometry">
        <rect>
-        <x>270</x>
+        <x>290</x>
         <y>320</y>
-        <width>151</width>
-        <height>29</height>
+        <width>141</width>
+        <height>41</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">ui-&gt;loginButton-&gt;setStyleSheet(
-    &quot;QPushButton {&quot;
-    &quot;background-color: #00C9A7;&quot;
-    &quot;color: white;&quot;
-    &quot;border-radius: 10px;&quot;
-    &quot;padding: 10px;&quot;
-    &quot;font-weight: bold;&quot;
-    &quot;border: 2px solid #00C9A7;&quot;
-    &quot;}&quot;
+       <string notr="true">QPushButton {
+    border: 2px solid #888888;
+	
 
-    &quot;QPushButton:hover {&quot;
-    &quot;background-color: #00e6c3;&quot;
-    &quot;border: 2px solid #00ffe0;&quot;   // fake glow
-    &quot;}&quot;
 
-    &quot;QPushButton:pressed {&quot;
-    &quot;background-color: #009e82;&quot;
-    &quot;}&quot;
-);</string>
+	background-color: qlineargradient(spread:pad, x1:0, y3:0, x2:1, y2:1, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(255, 255, 255, 255));
+    border-radius: 16px; /* Controls the corner roundness */
+    padding: 5px 15px;  /* Adds space around the text */
+}
+</string>
       </property>
       <property name="text">
        <string>Sign in</string>
@@ -115,7 +135,7 @@
      <widget class="QLabel" name="label">
       <property name="geometry">
        <rect>
-        <x>310</x>
+        <x>300</x>
         <y>120</y>
         <width>111</width>
         <height>91</height>
@@ -142,14 +162,14 @@
      <widget class="QLabel" name="label_2">
       <property name="geometry">
        <rect>
-        <x>250</x>
-        <y>80</y>
-        <width>221</width>
-        <height>20</height>
+        <x>120</x>
+        <y>50</y>
+        <width>461</width>
+        <height>51</height>
        </rect>
       </property>
       <property name="text">
-       <string>Inventory management system</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:16pt; font-weight:700;&quot;&gt;Inventory management system&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
       <property name="wordWrap">
        <bool>false</bool>
@@ -179,6 +199,19 @@
         <width>81</width>
         <height>81</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit {
+    border: 2px solid #a0a0a0;
+    border-radius: 14px;      /* Controls the corner roundness */
+    padding: 4px 8px;        /* Keeps the text away from the borders */
+     /* Keeps the background white */
+}
+
+/* Optional: Change border color when clicked/focused */
+QLineEdit:focus {
+    border: 2px solid #0078d4; 
+}</string>
       </property>
       <property name="text">
        <string/>

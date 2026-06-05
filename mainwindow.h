@@ -2,12 +2,19 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <QMap>
-#include <QTableWidgetItem>
+#include <QVector>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
+
+struct Item {
+    QString name;
+    int quantity;
+    double price;
+    QString category;
+    QString lastUpdated;
+};
 
 class MainWindow : public QMainWindow
 {
@@ -23,16 +30,20 @@ private slots:
     void on_addButton_clicked();
     void on_removeButton_clicked();
     void on_editButton_clicked();
-    void on_tableWidget_itemChanged(QTableWidgetItem *item);
     void on_logoutButton_clicked();
+
+    void showItemDetails(int index);
 
 private:
     Ui::MainWindow *ui;
-    QString itemNames[999];
-    int itemQty[999];
-    int itemCount =0;
+
+    Item items[199];   // ✅ array
+    int itemCount = 0; // ✅ number of items
 
     void updateTable();
+
+
 };
+
 
 #endif // MAINWINDOW_H
