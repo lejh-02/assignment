@@ -2,7 +2,7 @@
 #define LOGIN_H
 
 #include <QDialog>
-
+int checkuser(int);
 namespace Ui {
 class login;
 }

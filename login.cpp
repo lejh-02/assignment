@@ -19,10 +19,13 @@ login::~login()
 
 void login::on_loginButton_clicked()
 {
+    int xx=0;
+    int f=0;
     QString user = ui->usernameEdit->text();
     QString pass = ui->passwordEdit->text();
-
-    if (pass == "1234")
+    f = pass.toInt();
+    xx = checkuser(f);
+    if ( xx == 456789)
     {
         MainWindow *inventory = new MainWindow();
 
@@ -35,9 +38,10 @@ void login::on_loginButton_clicked()
     {
         QMessageBox::warning(this, "Login Failed", "Wrong username or password");
     }
+
+
+
 }
-
-
 void login::on_tutorialButton_clicked()
 {
     tutorial *guide = new tutorial(this);
@@ -49,3 +53,18 @@ void login::on_exitButton_clicked()
     QApplication::quit();
 }
 
+int checkuser(int pas)
+{
+    int n=0;
+    if (pas == 1234)
+    {
+        n=456789;
+    }
+    else
+    {
+        n=0;
+    }
+
+    return (n);
+
+}
