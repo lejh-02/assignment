@@ -4,6 +4,8 @@
 #include <QMessageBox>
 #include "tutorial.h"
 #include <QApplication>
+//default password is 1234
+extern int *sharedPassword = new int(1234);
 
 login::login(QDialog *parent)
     : QDialog(parent),
@@ -19,13 +21,13 @@ login::~login()
 
 void login::on_loginButton_clicked()
 {
-    int xx=0;
+    int check=0;
     int f=0;
     QString user = ui->usernameEdit->text();
     QString pass = ui->passwordEdit->text();
     f = pass.toInt();
-    xx = checkuser(f);
-    if ( xx == 456789)
+    check = checkuser(f);
+    if ( check == 456789)
     {
         MainWindow *inventory = new MainWindow();
 
@@ -56,7 +58,7 @@ void login::on_exitButton_clicked()
 int checkuser(int pas)
 {
     int n=0;
-    if (pas == 1234)
+    if (pas == *sharedPassword)
     {
         n=456789;
     }
