@@ -5,6 +5,7 @@
 #include "tutorial.h"
 #include <QApplication>
 
+//login
 login::login(QDialog *parent)
     : QDialog(parent),
     ui(new Ui::login)
@@ -16,6 +17,7 @@ login::~login()
 {
     delete ui;
 }
+//login button
 
 void login::on_loginButton_clicked()
 {
@@ -37,13 +39,14 @@ void login::on_loginButton_clicked()
     }
 }
 
+//info button
 
 void login::on_tutorialButton_clicked()
 {
     tutorial *guide = new tutorial(this);
     guide->show();
 }
-
+// x button
 void login::on_exitButton_clicked()
 {
     QApplication::quit();
