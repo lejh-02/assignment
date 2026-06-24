@@ -8,11 +8,12 @@
 #include <QTextStream>
 #include <QFileDialog>
 
+// Constructor: initialize UI and setup components
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
-    ui->setupUi(this);
+    ui->setupUi(this);//load ui design
 
     //  Add categories (array)
     QString categories[] = {"💡Electronics", "🍗Food", "👕Clothing", "✏️Stationery", "Other"};
